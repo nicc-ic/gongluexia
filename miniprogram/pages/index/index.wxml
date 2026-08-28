@@ -1,0 +1,28 @@
+<view class="page">
+  <view class="gold">英雄联盟 · {{patch}}</view>
+  <view class="h2">先看玩家实战，没有就联网检索。</view>
+  <view class="muted">公开攻略存在 GitHub 仓库 data/public-guides.json；私有笔记只留在本机。</view>
+  <view class="search">
+    <input placeholder="搜英雄、对线、克制、出装…" value="{{q}}" bindinput="onInput" />
+    <button class="btn" bindtap="onSearch">查询</button>
+  </view>
+
+  <view class="gold" style="margin-bottom: 16rpx;">热门英雄</view>
+  <view class="grid">
+    <view class="tile" wx:for="{{popular}}" wx:key="id" data-id="{{item.id}}" bindtap="openChamp">
+      <image src="{{item.icon}}" mode="aspectFill" />
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class="gold" style="margin: 32rpx 0 16rpx;">最新公开分享</view>
+  <view wx:if="{{!latest.length}}" class="empty">还没有从 GitHub 读到公开攻略。去「我的」连接仓库。</view>
+  <view class="card row" wx:for="{{latest}}" wx:key="id" data-id="{{item.id}}" bindtap="openGuide">
+    <image class="icon" src="{{item.icon}}" mode="aspectFill" />
+    <view>
+      <view><text class="badge badge-user">玩家分享</text><text class="badge badge-public">公开</text></view>
+      <view>{{item.title}}</view>
+      <view class="muted">{{item.champName}} · {{item.authorName}}</view>
+    </view>
+  </view>
+</view>

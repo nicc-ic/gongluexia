@@ -1,0 +1,147 @@
+page {
+  background: #0b0e12;
+  color: #efe6d2;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+.page {
+  padding: 24rpx 32rpx 48rpx;
+}
+
+.muted {
+  color: #9aa0a8;
+  font-size: 24rpx;
+}
+
+.gold {
+  color: #c8aa6e;
+}
+
+.h2 {
+  font-size: 40rpx;
+  font-weight: 700;
+  margin: 8rpx 0 16rpx;
+}
+
+.search {
+  display: flex;
+  gap: 16rpx;
+  margin: 20rpx 0 28rpx;
+}
+
+.search input,
+.field {
+  flex: 1;
+  background: #141a22;
+  border: 1px solid #2a3340;
+  color: #efe6d2;
+  border-radius: 16rpx;
+  padding: 16rpx 20rpx;
+  font-size: 28rpx;
+}
+
+.btn {
+  background: #c8aa6e;
+  color: #16120a;
+  border-radius: 16rpx;
+  padding: 16rpx 28rpx;
+  font-weight: 700;
+}
+
+.btn-ghost {
+  background: #1b232e;
+  color: #efe6d2;
+  border: 1px solid #2a3340;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-bottom: 20rpx;
+}
+
+.chip {
+  border: 1px solid #2a3340;
+  color: #9aa0a8;
+  border-radius: 999rpx;
+  padding: 8rpx 20rpx;
+  font-size: 24rpx;
+}
+
+.chip-on {
+  border-color: #c8aa6e;
+  color: #f0e6d2;
+}
+
+.card {
+  background: #141a22;
+  border: 1px solid #2a3340;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  margin-bottom: 16rpx;
+}
+
+.row {
+  display: flex;
+  gap: 16rpx;
+  align-items: center;
+}
+
+.icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 12rpx;
+}
+
+.badge {
+  font-size: 20rpx;
+  padding: 4rpx 12rpx;
+  border-radius: 999rpx;
+  margin-right: 8rpx;
+}
+
+.badge-user {
+  background: #1d2a22;
+  color: #9ad0b0;
+}
+
+.badge-web {
+  background: #1a2730;
+  color: #8ec8d4;
+}
+
+.badge-public {
+  background: #24301d;
+  color: #d7c07a;
+}
+
+.badge-private {
+  background: #2a2a2a;
+  color: #b9b3a9;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.tile {
+  width: 120rpx;
+  text-align: center;
+  font-size: 22rpx;
+}
+
+.tile image {
+  width: 104rpx;
+  height: 104rpx;
+  border-radius: 16rpx;
+  margin: 0 auto 8rpx;
+}
+
+.empty {
+  color: #9aa0a8;
+  font-size: 26rpx;
+  padding: 24rpx 0;
+}

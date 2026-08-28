@@ -1,0 +1,16 @@
+<view class="page" wx:if="{{guide}}">
+  <view class="row">
+    <image class="icon" src="{{icon}}" />
+    <view>
+      <text class="badge badge-user">玩家分享</text>
+      <text class="badge {{guide.visibility === 'public' ? 'badge-public' : 'badge-private'}}">{{guide.visibility === 'public' ? '公开' : '私有'}}</text>
+      <view class="h2">{{guide.title}}</view>
+      <view class="muted">{{guide.authorName}} · {{guide.patch}}版本</view>
+    </view>
+  </view>
+  <view class="card" style="margin-top: 24rpx; white-space: pre-wrap;">{{guide.body}}</view>
+  <button wx:if="{{isOwner}}" class="btn" style="margin-top: 24rpx;" bindtap="toggle">{{guide.visibility === 'public' ? '改为私有' : '改为公开'}}</button>
+</view>
+<view class="page" wx:else>
+  <view class="empty">内容不存在或无权查看。</view>
+</view>

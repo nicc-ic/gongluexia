@@ -1,0 +1,9 @@
+<view class="page" wx:if="{{champ}}">
+  <view class="h2">{{champ.name}}</view>
+  <view class="muted">{{champ.title}}</view>
+  <view class="gold" style="margin-top: 24rpx;">玩家分享</view>
+  <view wx:if="{{!playerHits.length}}" class="empty">还没有玩家公开攻略。</view>
+  <view class="card" wx:for="{{playerHits}}" wx:key="id" data-id="{{item.id}}" bindtap="openGuide">{{item.title}}</view>
+  <view class="gold" style="margin-top: 24rpx;">网络策略</view>
+  <view wx:if="{{web}}" class="card" bindtap="openWeb">{{web.title}}</view>
+</view>

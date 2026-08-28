@@ -1,0 +1,17 @@
+<view class="page" wx:if="{{web}}">
+  <text class="badge badge-web">网络策略</text>
+  <view class="h2">{{web.title}}</view>
+  <view class="muted">{{web.patch}}版本 · 非玩家原创</view>
+  <view class="card" style="margin-top: 24rpx;">
+    <view class="gold">核心思路</view>
+    <view>{{web.core}}</view>
+  </view>
+  <view class="card">
+    <view class="gold">出装倾向</view>
+    <view>{{web.build}}</view>
+  </view>
+  <view class="card">
+    <view class="gold">注意事项</view>
+    <view>{{web.notes}}</view>
+  </view>
+</view>

@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/publish/publish",
+    "pages/mine/mine",
+    "pages/guide/guide",
+    "pages/web/web",
+    "pages/champion/champion"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#0e131a",
+    "navigationBarTitleText": "攻略匣",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#0b0e12",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#9aa0a8",
+    "selectedColor": "#c8aa6e",
+    "backgroundColor": "#10151c",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "查询"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "投稿"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,26 @@
+<view class="page">
+  <input class="field" placeholder="英雄名、对线、克制、出装…" value="{{q}}" bindinput="onInput" />
+  <view class="chip-row">
+    <view class="chip {{role === item.id ? 'chip-on' : ''}}" wx:for="{{roles}}" wx:key="id" data-id="{{item.id}}" bindtap="setRole">{{item.label}}</view>
+  </view>
+
+  <view class="gold">玩家分享 {{playerHits.length}}</view>
+  <view wx:if="{{q && !playerHits.length}}" class="empty">还没有玩家公开这篇。正在走联网兜底。</view>
+  <view class="card row" wx:for="{{playerHits}}" wx:key="id" data-id="{{item.id}}" bindtap="openGuide">
+    <image class="icon" src="{{item.icon}}" mode="aspectFill" />
+    <view>
+      <view><text class="badge badge-user">玩家分享</text></view>
+      <view>{{item.title}}</view>
+      <view class="muted">{{item.champName}} · {{item.authorName}}</view>
+    </view>
+  </view>
+
+  <view class="gold" style="margin-top: 24rpx;">网络策略</view>
+  <view wx:if="{{loadingWeb}}" class="empty">正在检索本版本策略…</view>
+  <view wx:elif="{{web}}" class="card" bindtap="openWeb">
+    <text class="badge badge-web">网络策略</text>
+    <view>{{web.title}}</view>
+    <view class="muted">{{web.core}}</view>
+  </view>
+  <view wx:elif="{{playerHits.length}}" class="empty">玩家攻略已优先展示。</view>
+</view>

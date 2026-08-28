@@ -1,0 +1,20 @@
+<view class="page">
+  <block wx:if="{{!user}}">
+    <view class="muted">连接 GitHub 后才能投稿。公开内容写入仓库；私有只留本机。</view>
+    <input class="field" password placeholder="粘贴 GitHub Token" bindinput="onToken" style="margin: 24rpx 0;" />
+    <button class="btn" bindtap="connect">连接 GitHub</button>
+  </block>
+  <block wx:else>
+    <view class="muted">标题</view>
+    <input class="field" bindinput="onTitle" placeholder="例如：这版芮尔辅助怎么开团" />
+    <view class="muted" style="margin-top: 20rpx;">搜索英雄</view>
+    <input class="field" bindinput="onChampQ" placeholder="输入中文名" />
+    <view class="chip-row">
+      <view class="chip {{championId === item.id ? 'chip-on' : ''}}" wx:for="{{champs}}" wx:key="id" data-id="{{item.id}}" bindtap="pickChamp">{{item.name}}</view>
+    </view>
+    <view class="muted">正文</view>
+    <textarea class="field" style="height: 240rpx;" bindinput="onBody" placeholder="用自己的话写对线/出装/团战。" />
+    <button class="btn {{public ? '' : 'btn-ghost'}}" style="margin-top: 24rpx;" bindtap="togglePublic">{{public ? '公开共享（将写入 GitHub）' : '仅自己可见'}}</button>
+    <button class="btn" style="margin-top: 16rpx;" bindtap="submit">发布</button>
+  </block>
+</view>

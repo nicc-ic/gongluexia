@@ -1,0 +1,9 @@
+{
+  "description": "攻略匣 sitemap",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

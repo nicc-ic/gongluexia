@@ -1,0 +1,22 @@
+{
+  "updatedAt": "2026-08-28T08:00:00.000Z",
+  "guides": [
+    {
+      "id": "seed-garen-top",
+      "title": "盖伦上单：这版对线别急着换血",
+      "championId": "Garen",
+      "role": "top",
+      "contentType": "tactic",
+      "patch": "16.17",
+      "tags": ["对线", "换血", "团战"],
+      "body": "这版盖伦对线别一上来就Q冲脸。先用被动回血把血线撑住，等对面技能打空再沉默进场。\n\n对战战士：短换血，Q沉默接E，立刻走开叠被动。对战远程：出鞋子后找兵线掩护接近。\n\n团战等对方关键控制交掉，再从侧翼进场砍C位。没大招时不要当开团按钮。\n\n出门多兰盾；对穿刺出防御鞋，对法系出水银鞋。核心坦度装按对面阵容选荆棘或自然之力。",
+      "visibility": "public",
+      "status": "published",
+      "sourceType": "user",
+      "authorId": "seed-player",
+      "authorName": "德玛老兵",
+      "createdAt": "2026-08-28T08:00:00.000Z",
+      "updatedAt": "2026-08-28T08:00:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+<view class="page">
+  <block wx:if="{{!user}}">
+    <view class="muted">连接 GitHub 后，公开攻略会写入仓库 data/public-guides.json。</view>
+    <input class="field" password placeholder="粘贴 GitHub Token" bindinput="onToken" style="margin: 24rpx 0;" />
+    <button class="btn" bindtap="connect">连接 GitHub</button>
+  </block>
+  <block wx:else>
+    <view class="h2">{{user.name}}</view>
+    <view class="muted">{{githubConnected ? '已连接 GitHub' : '未连接'}} · {{mine.length}} 篇</view>
+    <view wx:if="{{syncError}}" class="muted">{{syncError}}</view>
+    <button class="btn-ghost btn" style="margin: 20rpx 0;" bindtap="logout">退出</button>
+    <view class="card" wx:for="{{mine}}" wx:key="id" data-id="{{item.id}}" bindtap="openGuide">
+      <text class="badge {{item.visibility === 'public' ? 'badge-public' : 'badge-private'}}">{{item.visibility === 'public' ? '公开' : '私有'}}</text>
+      <view>{{item.title}}</view>
+    </view>
+    <view wx:if="{{!mine.length}}" class="empty">还没有攻略。</view>
+  </block>
+</view>
