@@ -46,7 +46,7 @@ export function loadGithubOwner() {
   return (
     localStorage.getItem(OWNER_KEY) ||
     (import.meta.env.VITE_GITHUB_OWNER as string | undefined) ||
-    ''
+    'nicc-ic'
   )
 }
 

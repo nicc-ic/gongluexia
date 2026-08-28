@@ -21,7 +21,7 @@ App({
 
   async boot() {
     const token = wx.getStorageSync('githubToken') || ''
-    const owner = wx.getStorageSync('githubOwner') || ''
+    const owner = wx.getStorageSync('githubOwner') || 'nicc-ic'
     this.globalData.token = token
     this.globalData.owner = owner
     this.globalData.user = wx.getStorageSync('user') || null
